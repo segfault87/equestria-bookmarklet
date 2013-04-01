@@ -18,6 +18,7 @@ var pony = {
 
     items: [],
     active: true,
+    running: false,
     
     initialize: function() {
         setInterval(pony.update, 33);
@@ -83,6 +84,8 @@ var pony = {
         
         if (pony.items.length > pony.limit)
             return;
+
+        pony.running = true;
         
         /* 50% of chance */
         if (pony.random(0, 1) == 0) {
@@ -110,5 +113,6 @@ var pony = {
     }
 }
 
-pony.initialize();
+if (!pony.running)
+    pony.initialize();
 
