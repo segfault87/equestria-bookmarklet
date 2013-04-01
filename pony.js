@@ -8,7 +8,7 @@ var pony = {
     size: '150px',
     url_base: 'http://equestria-bookmarklet.influx.kr/',
     assets: [
-        'pony1,png',
+        'pony1.png',
         'pony2.png',
         'pony3.png',
         'pony4.png',
@@ -64,7 +64,7 @@ var pony = {
             });
             item.life += item.velocity;
             item.x += item.velocity;
-            if (item.x > document.body.clientWidth) {
+            if (item.x > window.innerWidth) {
                 removeflag = true;
                 item.elem.remove();
                 item.remove = true;
@@ -86,7 +86,7 @@ var pony = {
         
         /* 50% of chance */
         if (pony.random(0, 1) == 0) {
-            var y = pony.random(0, document.body.clientHeight - 8);
+            var y = pony.random(0, window.innerHeight - 8);
             var elem = $('<img></img>')
                 .attr('src', pony.url_base + pony.assets[pony.random(0, pony.assets.length - 1)])
                 .attr('alt', 'pony!')
