@@ -1,7 +1,7 @@
 var pony = {
     limit: 10,
     size: '150px',
-    url_base: 'http://equestria-bookmarklet.github.com/',
+    url_base: 'http://equestria-bookmarklet.influx.kr/',
     assets: [
         'pony1,png',
         'pony2.png',
