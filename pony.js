@@ -1,3 +1,8 @@
+var script = document.createElement('script');
+script.src = 'http://code.jquery.com/jquery-latest.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 var pony = {
     limit: 10,
     size: '150px',
@@ -105,6 +110,5 @@ var pony = {
     }
 }
 
-$(document).ready(function() {
-    pony.initialize();
-});
+pony.initialize();
+
